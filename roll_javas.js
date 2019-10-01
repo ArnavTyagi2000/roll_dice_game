@@ -70,12 +70,12 @@
 
 
 var sum=0;
-var t=5;
+var t=10;
 
 function fn()
 {
 
-	if(t==5)
+	if(t==10)
 	{
 		timeless();
 	}
@@ -88,16 +88,17 @@ function fn()
 
 function timeless()
 {
-	if(t<0)
+	if(t<1)
 	{
 		document.getElementById("rbutton").disabled=true;
-		alert("Time Up !   Reload Page");
+		alert("Time Up !   Reload page to play again ");
 	}
 	else
 	{
 		setTimeout(function(){timeless();},1000);
 		--t;
 		console.log(t);
+		document.getElementById('timer').innerHTML = t;
 	}
 }
 
